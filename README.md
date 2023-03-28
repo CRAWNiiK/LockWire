@@ -22,13 +22,21 @@ The script accepts the following options:
 
 
 -e, --encrypt: Encrypt a message.
+
 -d, --decrypt: Decrypt a message.
+
 -k, --keyfile: Specify the name of the key file (default: key).
+
 -f, --input-file: Specify the input file.
+
 -o, --output-file: Specify the output file.
+
 -g, --generate-key: Generate a new key pair.
+
 -h, --help: Show help message and exit.
+
 -v, --version: Show the version of the script.
+
 
 Examples
 
