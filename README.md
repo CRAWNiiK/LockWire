@@ -8,14 +8,20 @@ usage
 
 Generate key pair
 
-`python LockWire.py -g mykeys`
+`python LockWire.py -g`
+
+this will generate key_pub.pem and key_priv.pem
+
+you can rename it but leave the _pub.pem alone
+
+ex crawniik_pub.pem
 
 Encrypt txt file contents
 
-`python LockWire.py -e filetoencrypt.txt -k mykeys -o outputfile.txt `
+`python LockWire.py -e filetoencrypt.txt -k crawniik -o outputfile.txt `
 
 Decrypt txt file contents
 
-`python LockWire.py -d filetodecrypt.txt -k mykeys -o outputfile.txt `
+`python LockWire.py -d filetodecrypt.txt -k crawniik -o outputfile.txt `
 
 `python LockWire.py -h`
