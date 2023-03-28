@@ -14,6 +14,6 @@ Encrypt txt file contents
 
 Decrypt txt file contents
 
-`python LockWire.py -d filetoencrypt.txt -k mykeys -o outputfile.txt `
+`python LockWire.py -d filetodecrypt.txt -k mykeys -o outputfile.txt `
 
 `python LockWire.py -h`
