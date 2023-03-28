@@ -2,6 +2,8 @@
 
 RSA Encryption and Decryption built in Python
 
+`pip install rsa`
+
 usage
 
 Generate key pair
