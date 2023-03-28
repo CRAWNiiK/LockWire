@@ -1,27 +1,33 @@
 # LockWire
 
-RSA Encryption and Decryption built in Python
+LockWire is a Python script that allows you to encrypt and decrypt messages using RSA 4096-bit.
 
-`pip install rsa`
+## Requirements
+- Python 3.x
+- `rsa` module (you can install it using `pip install rsa`)
 
-usage
+## Usage
 
-`python LockWire.py -h`
+### Generating a new key pair
+To generate a new key pair, use the `-g` or `--generate-key` argument. By default, the key files will be named `key_pub.pem` and `key_priv.pem`. To specify a custom name, use the `-k` or `--keyfile` argument followed by the desired name.
 
-Generate key pair
+Example: `python LockWire.py -g -k mykey`
 
-`python LockWire.py -g crawniik`
+This will generate a new key pair with the file names `mykey_pub.pem` and `mykey_priv.pem`.
 
-this will generate crawniik_pub.pem and crawniik_priv.pem
+### Encrypting a message
+To encrypt a message, use the `-e` or `--encrypt` argument followed by the name of the input file, and the `-o` or `--output-file` argument followed by the desired output file name. The public key file will be automatically loaded based on the `-k` or `--keyfile` argument.
 
-you can rename it but leave the _pub.pem alone
+Example: `python LockWire.py -e message.txt -o message.enc`
 
-ex crawniik_pub.pem
+This will encrypt the contents of `message.txt` using the public key in `key_pub.pem`, and save the encrypted message to `message.enc`.
 
-Encrypt txt file contents
+### Decrypting a message
+To decrypt a message, use the `-d` or `--decrypt` argument followed by the name of the input file, and the `-o` or `--output-file` argument followed by the desired output file name. The private key file will be automatically loaded based on the `-k` or `--keyfile` argument.
 
-`python LockWire.py -e filetoencrypt.txt -k crawniik -o outputfile.txt `
+Example: `python LockWire.py -d message.enc -o message.txt`
 
-Decrypt txt file contents
+This will decrypt the contents of `message.enc` using the private key in `key_priv.pem`, and save the decrypted message to `message.txt`.
 
-`python LockWire.py -d filetodecrypt.txt -k crawniik -o outputfile.txt `
+## License
+This script is released under the MIT License. See `LICENSE` for more information.
