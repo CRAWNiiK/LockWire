@@ -10,9 +10,9 @@ usage
 
 Generate key pair
 
-`python LockWire.py -g`
+`python LockWire.py -g crawniik`
 
-this will generate key_pub.pem and key_priv.pem
+this will generate crawniik_pub.pem and crawniik_priv.pem
 
 you can rename it but leave the _pub.pem alone
 
