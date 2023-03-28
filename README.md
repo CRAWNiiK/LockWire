@@ -28,6 +28,3 @@ To decrypt a message, use the `-d` or `--decrypt` argument followed by the name 
 Example: `python LockWire.py -d encrypted-message.txt -k mykey -o decrypted-message.txt`
 
 This will decrypt the contents of `encrypted-message.txt` using the private key in `key_priv.pem`, and save the decrypted message to `decrypted-message.txt`.
-
-## License
-This script is released under the MIT License. See `LICENSE` for more information.
