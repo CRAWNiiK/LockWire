@@ -8,7 +8,7 @@ def generate_key(keyfile):
         f.write(public_key.save_pkcs1())
     with open(keyfile + "_priv.pem", "wb") as f:
         f.write(private_key.save_pkcs1())
-    print("New key pair generated.")
+    print(f"New key pair generated with name {keyfile}.")
 
 def encrypt(keyfile, message_file, output_file):
     with open(keyfile + "_pub.pem", "rb") as f:
@@ -36,7 +36,7 @@ def decrypt(keyfile, message_file, output_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Encrypt or decrypt a message using RSA 4096-bit.")
-    parser.add_argument("-g", "--generate-key", action="store_true", help="Generate a new key pair.")
+    parser.add_argument("-g", "--generate-key", metavar="KEY_NAME", help="Generate a new key pair with specified name.")
     parser.add_argument("-e", "--encrypt", metavar="FILE", help="Encrypt a message from the specified input file.")
     parser.add_argument("-d", "--decrypt", metavar="FILE", help="Decrypt a message from the specified input file.")
     parser.add_argument("-k", "--keyfile", default="key", help="Specify the name of the key file (default: key).")
@@ -45,7 +45,7 @@ def main():
     args = parser.parse_args()
 
     if args.generate_key:
-        generate_key(args.keyfile)
+        generate_key(args.generate_key)
     elif args.encrypt:
         if not args.output_file:
             print("Error: Output file not specified.")
