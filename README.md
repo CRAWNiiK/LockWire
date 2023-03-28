@@ -1,6 +1,7 @@
 # LockWire
 
 RSA Encryption/Decryption Script
+
 This is a command-line script for encrypting and decrypting messages using the RSA encryption algorithm.
 
 Prerequisites
