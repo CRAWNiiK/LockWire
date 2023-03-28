@@ -6,6 +6,8 @@ RSA Encryption and Decryption built in Python
 
 usage
 
+`python LockWire.py -h`
+
 Generate key pair
 
 `python LockWire.py -g`
@@ -23,5 +25,3 @@ Encrypt txt file contents
 Decrypt txt file contents
 
 `python LockWire.py -d filetodecrypt.txt -k crawniik -o outputfile.txt `
-
-`python LockWire.py -h`
