@@ -9,7 +9,7 @@ LockWire is a Python script that allows you to encrypt and decrypt messages usin
 ## Usage
 
 ### Generating a new key pair
-To generate a new key pair, use the `-g` or `--generate-key` argument. By default, the key files will be named `key_pub.pem` and `key_priv.pem`. To specify a custom name, use the `-k` or `--keyfile` argument followed by the desired name.
+To generate a new key pair, use the `-g` or `--generate-key` argument. By default, the key files will be named `key_pub.pem` and `key_priv.pem`. To specify a custom name, use the `-g` or `--generate-key` argument followed by the desired name.
 
 Example: `python LockWire.py -g mykey`
 
